@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github-user-app/static/css/main.1f345509.css",
-    "main.js": "/github-user-app/static/js/main.4bf248d4.js",
-    "static/js/453.263aff94.chunk.js": "/github-user-app/static/js/453.263aff94.chunk.js",
-    "index.html": "/github-user-app/index.html",
-    "main.1f345509.css.map": "/github-user-app/static/css/main.1f345509.css.map",
-    "main.4bf248d4.js.map": "/github-user-app/static/js/main.4bf248d4.js.map",
-    "453.263aff94.chunk.js.map": "/github-user-app/static/js/453.263aff94.chunk.js.map"
+    "main.css": "/github-user-finder/static/css/main.1f345509.css",
+    "main.js": "/github-user-finder/static/js/main.3ecc3b72.js",
+    "static/js/453.51fd8f05.chunk.js": "/github-user-finder/static/js/453.51fd8f05.chunk.js",
+    "index.html": "/github-user-finder/index.html",
+    "main.1f345509.css.map": "/github-user-finder/static/css/main.1f345509.css.map",
+    "main.3ecc3b72.js.map": "/github-user-finder/static/js/main.3ecc3b72.js.map",
+    "453.51fd8f05.chunk.js.map": "/github-user-finder/static/js/453.51fd8f05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f345509.css",
-    "static/js/main.4bf248d4.js"
+    "static/js/main.3ecc3b72.js"
   ]
 }
