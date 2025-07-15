@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form/Form";
+import UserDetails from "./components/UserDetails/UserDetails";
+import { getUser, getRepos } from "./api/github";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [repos, setRepos] = useState([]);
+
+  const handleSearch = async (username) => {
+    try {
+      const userData = await getUser(username);
+      const repoData = await getRepos(username);
+      setUser(userData);
+      setRepos(repoData);
+    } catch {
+      alert("Greška prilikom dohvaćanja podataka");
+    }
+  };
+
+  const handleReset = () => {
+    setUser(null);
+    setRepos([]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>GitHub User Finder</h1>
+      {!user ? (
+        <Form onSubmit={handleSearch} />
+      ) : (
+        <UserDetails user={user} repos={repos} onReset={handleReset} />
+      )}
     </div>
   );
-}
+};
 
 export default App;
